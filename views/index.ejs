@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>URL Shortner</title>
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid text-bg-primary p-3 text-center d-grid gap-3 mt-5">
+        <h1 class="display-1">URL Shortner</h1>
+        <form action="/url" method="post" class="container">
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control" placeholder="Shorten your link">
+                <button class="btn btn btn-dark" type="submit" id="button-addon2">Shorten</button>
+              </div>
+        </form>
+        <div class="container bg-light rounded">
+            <table class="table table-striped table-responsive">
+                <thead>
+                  <tr>
+                    <th>Full URL</th>
+                    <th>Short URL</th>
+                    <th>Copy</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td><a href="#" target="_blank">Link</a></td>
+                      <td><a href="#" target="_blank">Link</a></td>
+                      <td><button type="button" class="btn btn-secondary" onclick="copyText()"><i class="fa-regular fa-clipboard"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        function copyText() {
+            var copyText = document.getElementById("myInput");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+    </script>
+</body>
+
+</html>
