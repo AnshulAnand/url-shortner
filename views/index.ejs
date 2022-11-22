@@ -31,7 +31,7 @@
                 <tbody>
                     <% data.forEach( el => { %>
                     <tr>
-                      <td><a href="<%= el.fullURL %>" target="_blank"><%= el.fullURL %></a></td>
+                      <td class="text-truncate" style="max-width: 150px;"><a href="<%= el.fullURL %>" target="_blank" class="text-truncate" style="max-width: 150px"><%= el.fullURL %></a></td>
                       <td><a href="<%= el.shortURL %>" target="_blank" id="short-url">http://localhost:3000/<%= el.shortURL %></a></td>
                       <td><button type="button" class="btn btn-secondary" onclick="copyText(this)" data-url="http://localhost:3000/<%= el.shortURL %>"><i id="icon" class="fa-regular fa-clipboard"></i></button></td>
                     </tr>
