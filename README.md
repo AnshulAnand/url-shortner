@@ -7,4 +7,4 @@ npm install
 npm start
 ```
 
-![url-shortner](/localhost_3000_.png)
+![localhost_3000_](https://user-images.githubusercontent.com/91583685/203269417-960680b4-276a-46a4-830b-4eeb87488910.png)
